@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span id="welcomeUser"></span>
+  <div>
+    <button id="darkModeBtn">🌙</button>
+    <button id="logoutBtn">Logout</button>
+  </div>
+</div>
+
+<div class="menu">
+  <button onclick="showSection('home')">Home</button>
+  <button onclick="showSection('portfolio')">Portfolio</button>
+  <button onclick="showSection('profile')">Profile</button>
+</div>
+
+<!-- HOME -->
+<div id="home" class="section">
+  <h3>Dashboard</h3>
+  <p>Total Project: <span id="totalProject">0</span></p>
+</div>
+
+<!-- PORTFOLIO -->
+<div id="portfolio" class="section" style="display:none;">
+  <h3>Kelola Project</h3>
+
+  <input type="text" id="projectName" placeholder="Nama Project">
+  <input type="text" id="projectLink" placeholder="Link Project">
+  <button id="addProjectBtn">Tambah</button>
+
+  <hr>
+
+  <input type="text" id="searchProject" placeholder="Cari Project...">
+
+  <ul id="projectList"></ul>
+</div>
+
+<!-- PROFILE -->
+<div id="profile" class="section" style="display:none;">
+  <h3>Edit Profile</h3>
+
+  <input type="text" id="profileName" placeholder="Nama">
+  <input type="email" id="profileEmail" placeholder="Email">
+  <button id="saveProfileBtn">Simpan</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
